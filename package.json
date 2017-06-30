@@ -1,0 +1,20 @@
+{
+  "name": "angularjs-exercise-tests",
+  "version": "1.0.0",
+  "description": "tests for angular exercise",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dionis Takac",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.6.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
+  }
+}

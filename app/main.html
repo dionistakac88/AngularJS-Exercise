@@ -1,0 +1,29 @@
+<div class="container"> 
+       <h2 class="text-center">Customer Overview</h2>
+       <button type="button" class="btn btn-primary" ng-click="addCustomer()">Add New Customer</button>
+       <br><br>
+        <table st-table="customersStTable" st-safe-src="$storage" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                  <th st-sort="firstName">First Name</th>
+                  <th st-sort-default="true" st-sort="lastName">Last Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in customersStTable">
+                  <td>{{row.firstName}}</td>
+                  <td>{{row.lastName}}</td>
+                  <td>{{calculateAge(row.birthday)}}</td>
+                  <td>{{row.gender}}</td>
+                  <td class="options-width">
+                      <button type="button" class="btn btn-primary" ng-click="editCustomer(row)">Edit</button>
+                      <button type="button" class="btn btn-primary" ng-click="deleteCustomer(row)">Delete</button>
+                      <button type="button" class="btn btn-success" ng-click="navigationCustomer(row)">Navi</button>
+                  </td>
+                </tr>
+            </tbody>
+        </table>
+</div>

@@ -1,0 +1,20 @@
+<div class="container"> 
+    <h2 class="text-center">Navigation Data</h2>
+    <br><br>
+    <table st-table="navigationStTable" st-safe-src="filteredNavigationData" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+              <th st-sort="Page">Page</th>
+              <th st-sort-default="true" st-sort="Timestamp">Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in navigationStTable">
+              <td>{{item.page}}</td>
+              <td>{{item.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" ng-click="backToOverview()">Back To Overview</button>
+</div>
+
